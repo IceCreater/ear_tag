@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="Zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+
+<body>
+
+<table style="margin: auto">
+    <tr>
+        <th >id</th>
+        <th>温度</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>重量</th>
+        <th>健康状态</th>
+        <th>标记</th>
+        <th>更新时间</th>
+    </tr>
+    <tr th:each="ear_tag: ${ear_tags}">
+        <td th:text="${ear_tag.id}">1</td>
+        <td th:text="${ear_tag.temp}">10</td>
+        <td th:text="${ear_tag.sex}">公</td>
+        <td th:text="${ear_tag.age}+'岁'">5</td>
+        <td th:text="${ear_tag.weight+'kg'}">500.1</td>
+        <script>
+            var health = "${ear_tag.health}";
+            if (health === 1) {
+                document.getElementById('Health').innerHTML ="健康";
+            }
+            else {
+                document.getElementById("Health").innerHTML ="不健康";
+            }
+        </script>
+        <td id = "Health">良</td>
+        <td th:text="${ear_tag.remark}">0</td>
+        <td th:text="${#dates.format(ear_tag.update_time,'yyyy-MM-dd HH:mm:ss')}">1154164654</td>
+    </tr>
+</table>
+
+</body>
+
+
+
+</html>
