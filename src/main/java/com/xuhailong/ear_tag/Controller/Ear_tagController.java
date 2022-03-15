@@ -41,8 +41,8 @@ public class Ear_tagController {
     }
 
     @RequestMapping({"/index","/"})
-    public String index(Model model){
-        model.addAttribute("ear_tags",ear_tagMapper.query());
+    public String index(){
+//        model.addAttribute("ear_tags",ear_tagMapper.query());
         return "index";
     }
 

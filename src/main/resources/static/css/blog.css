@@ -1,0 +1,12 @@
+.but-publish{
+    padding: 0 16px;
+    font-size: 24px;
+    color: #fff;border: none;
+    border-right: 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    white-space: nowrap;
+    background: #fc5531;
+}

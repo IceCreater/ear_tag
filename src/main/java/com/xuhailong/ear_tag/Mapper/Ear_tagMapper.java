@@ -25,6 +25,14 @@ public interface Ear_tagMapper {
     })
     List<Ear_tag> query();
 
+    @Select("select * from ear_tag where id < #{num};")
+    @Results({
+            @Result(column = "create_time",property = "create_time"),
+            @Result(column = "update_time",property = "update_time")
+    })
+    List<Ear_tag> query1(int num);
+
+
     @Select("select * from ear_tag where id = #{param1}")
     Ear_tag select(int id);
 

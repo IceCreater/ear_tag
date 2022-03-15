@@ -5,6 +5,7 @@
     <groupId>com.xuhailong</groupId>
     <artifactId>ear_tag</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>ear_tag</name>
     <description>graduation project</description>
 
@@ -113,6 +114,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
