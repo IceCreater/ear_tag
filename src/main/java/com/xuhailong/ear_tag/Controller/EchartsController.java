@@ -39,7 +39,8 @@ public class EchartsController {
     }
 
     @RequestMapping("/Echats")
-    public String echats(){
+    public String echats(Model model){
+        model.addAttribute("ear_tags",ear_tagMapper.query());
         return "Echats";
     }
 

@@ -26,7 +26,7 @@ public class Ear_tagController {
 //        Random random = new Random();
 //        random.Rand();
 
-            for(int i = 0; i < 1000; i++) {
+            for(int i = 0; i < 20; i++) {
                 double temp = 38.5 + Math.random();
                 char  sex = '公';
                 if (Math.random()*2 < 1) {
